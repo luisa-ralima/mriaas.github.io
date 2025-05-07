@@ -1,3 +1,12 @@
+name: Deploy Docker
+on:
+  push:
+    branches: [ "main" ] # Dispara o workflow quando houver um push na branch principal (você pode alterar)
+
+permissions:
+  pages: write
+  id-token: write
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
