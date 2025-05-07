@@ -29,10 +29,5 @@ jobs:
       
       - name: Build and push Docker image
         run: |
-<<<<<<< HEAD
-          docker buildx build -t camileite/gelatosavelas:${GITHUB_SHA} .
-          docker push camileite/gelatosavelas:${GITHUB_SHA} 
-=======
           docker buildx build -t camileite/mriaas:${{ github.sha }} .
           docker push camileite/mriaas:${{github.sha}} 
->>>>>>> de67030fe2efc967c38ca8db611987581b78a8d2
