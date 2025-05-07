@@ -20,5 +20,6 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t seu-usuario/sua-imagem:${GITHUB_SHA} .
-          docker push seu-usuario/sua-imagem:${GITHUB_SHA}
+          docker build -t ${{secrets.DOCKERHUB_USERNAME}}/mriaas:
+            ${{secrets.GITHUB_TOKEN}} .
+          docker push ${{secrets.DOCKERHUB_USERNAME}}/mriaas:${{secrets.GITHUB_TOKEN}} 
