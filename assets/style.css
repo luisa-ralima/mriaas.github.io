@@ -46,11 +46,11 @@ body {
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .title {
     font-size: 2.2rem;
   }
   .subtitle {
     font-size: 1.2rem;
   }
-}
+} */
