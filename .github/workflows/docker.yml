@@ -29,5 +29,5 @@ jobs:
       
       - name: Build and push Docker image
         run: |
-          docker buildx build -t DOCKERHUB_USERNAME/mriaas:${{ github.sha }} .
-          docker push DOCKERHUB_USERNAME/mriaas:${{github.sha}} 
+          docker buildx build -t {{ secrets.DOCKERHUB_USERNAME }}/mriaas:${{ github.sha }} .
+          docker push {{ secrets.DOCKERHUB_USERNAME }}/mriaas:${{github.sha}} 
